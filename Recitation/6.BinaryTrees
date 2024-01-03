@@ -1,7 +1,0 @@
-class BinaryNode:
-  def __init__(A, x):   # (A, x)  == (self, x)
-    A.item = x
-    A.left = None
-    A.right = None
-
-    
