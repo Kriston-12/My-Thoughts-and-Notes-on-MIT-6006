@@ -57,4 +57,18 @@ def sub_tree_delete(A):
   else:                # A is a leaf node
     if (A is A.parent.left): A.parent.left = None
     else: A.parent.right = None
+
+class Binary_Tree:
+  def __init__(T, Node_Type = Binary_Node):
+    T.root = None
+    T.size = 0
+    T.Node_Type = Node_Type
+ 
+  def __len__(T): return T.size
+    
+  def __iter__(T):
+    if T.root:
+      for A in T.root.subtree_iter():  # T.root.subtree_iter(): is a generator function
+        yield A.item
+
     
